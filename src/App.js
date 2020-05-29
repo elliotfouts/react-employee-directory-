@@ -17,7 +17,7 @@ function App() {
 	}, []);
 
 	function handleInputChange(event) {
-		let filterValue = event.target.value;
+		let filterValue = event.target.value.toLowerCase();
 		let filteredEmployees = employees.filter((employee) => {
 			let employeeName = `${employee.name.first} ${employee.name.last}`;
 			return employeeName.toLowerCase().includes(filterValue);
